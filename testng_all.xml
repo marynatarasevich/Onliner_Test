@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="OnlinerTest">
+    <test name="ChromeTest" parallel="classes" thread-count="6">
+        <parameter name="browser" value="chrome"/>
+
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+
+            <class name="by.mt.onliner.tests.AboutTheCompany_Test"/>
+            <class name="by.mt.onliner.tests.Basket_Test"/>
+            <class name="by.mt.onliner.tests.CompareGoods_Test"/>
+            <class name="by.mt.onliner.tests.FindFlats_Test"/>
+            <class name="by.mt.onliner.tests.MobilePhones_Test"/>
+            <class name="by.mt.onliner.tests.NoteBooks_Test"/>
+
+
+
+        </classes>
+    </test>
+
+
+</suite>
