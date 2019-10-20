@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="OnlinerTest">
-    <test name="ChromeTest" parallel="classes" thread-count="6">
+    <test name="ChromeTest">
         <parameter name="browser" value="chrome"/>
 
         <groups>
