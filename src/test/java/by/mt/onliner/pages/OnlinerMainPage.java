@@ -30,7 +30,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//*[@class='onliner_logo']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -40,7 +40,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//a[contains(text(),'О компании')][@class='footer-style__link footer-style__link_primary']")).click();
             return new AboutTheCompanyPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }
@@ -51,7 +51,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             getDriver().switchTo().frame(getDriver().findElement(By.xpath("//iframe[@class='modal-iframe']")));
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -61,7 +61,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//div[@class='product__title']//a[contains(text(),'" + goodTitle + "')]//parent::div//parent::div[@class='product__details']//following-sibling::label[@class='product__compare']//input//following-sibling::span")).click();
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -74,7 +74,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//a[@class='compare-button__sub compare-button__sub_main']")).click();
             return new ComparisionPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }
@@ -85,7 +85,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             actions.moveToElement(getDriver().findElement(By.xpath("//span[@class='b-main-navigation__text'][text()='Дома и квартиры']"))).build().perform();
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -98,7 +98,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//span[@class='b-main-navigation__dropdown-advert-sign'][text()='3-комнатные']")).click();
             return new FlatsPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }
@@ -107,7 +107,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//span[@class='project-navigation__sign'][text()='Ноутбуки']")).click();
             return new NoteBooksPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }
@@ -117,7 +117,7 @@ public class OnlinerMainPage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//span[@class='project-navigation__sign'][text()='Мобильные телефоны']")).click();
             return new MobilePhonesPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }

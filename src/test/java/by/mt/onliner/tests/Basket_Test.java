@@ -35,10 +35,10 @@ public class Basket_Test extends BaseTest {
             LOGGER.log(Level.INFO, "open basket");
             BasketPage basketPage = offersPage.openBasket();
             LOGGER.log(Level.INFO, "test that the good is in the basket");
-            assertTrue("Не отображается телефон в корзине!", basketPage.checkGoodIsPresent(good));
+            assertTrue("Phone is not displayed!", basketPage.checkGoodIsPresent(good));
         }catch (Exception e){
             LOGGER.log(Level.WARNING,"execption" , e);
-            fail("Есть exceptions");
+            fail("exceptions");
         }
 
     }

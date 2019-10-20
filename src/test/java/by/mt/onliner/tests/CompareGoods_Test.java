@@ -33,10 +33,10 @@ public class CompareGoods_Test extends BaseTest{
             expectedGoods.add("Samsung Galaxy A50");
             expectedGoods.add("Samsung Galaxy S10");
             LOGGER.log(Level.INFO, "check comnparisioon");
-            assertTrue("Сравниваемые товары неверны!", ComparisionHelper.compare(expectedGoods, comparisionPage.getComparedGoodsTitles()));
+            assertTrue("Compared goods are not correct!", ComparisionHelper.compare(expectedGoods, comparisionPage.getComparedGoodsTitles()));
         }catch(Exception e){
             LOGGER.log(Level.WARNING,"exception" , e);
-            fail("Есть excecptions");
+            fail("excecptions");
         }
     }
 

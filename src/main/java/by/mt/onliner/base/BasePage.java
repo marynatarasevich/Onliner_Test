@@ -20,13 +20,14 @@ public abstract class BasePage {
             LogManager.getLogManager().readConfiguration(ins);
 
             LOGGER = Logger.getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
-            Handler[] handlers=LOGGER.getHandlers();
-            for (Handler handler:handlers){
+            Handler[] handlers = LOGGER.getHandlers();
+            for (Handler handler : handlers) {
                 handler.setEncoding("UTF-8");
             }
         } catch (Exception ignore) {
             ignore.printStackTrace();
-        } }
+        }
+    }
         private static final int WAIT_FOR_PAGE_LOAD_IN_SECONDS = 20;
 
 

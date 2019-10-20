@@ -31,12 +31,12 @@ public class NoteBooks_Test extends BaseTest {
             noteBooksPage.chooseColor("розовый");
             TimeUtils.waitForSeconds(1);
             LOGGER.log(Level.INFO, "check that notebook found Apple MacBook (2017 год)");
-            assertTrue("Не найден нужный ноубук!", noteBooksPage.checkFound("Apple MacBook (2017 год)"));
-            LOGGER.log(Level.INFO, "проверяем что в описании есть цвет крышки розовый");
-            assertTrue("check that descrition contains color pink!", noteBooksPage.checkDescriptionOfFoundContains("Apple MacBook (2017 год)", "цвет крышки розовый"));
+            assertTrue("The notebook is not found!", noteBooksPage.checkFound("Apple MacBook (2017 год)"));
+            LOGGER.log(Level.INFO, "check that descrition contains color pink");
+            assertTrue("color is not pink!", noteBooksPage.checkDescriptionOfFoundContains("Apple MacBook (2017 год)", "цвет крышки розовый"));
         }catch(Exception e){
             LOGGER.log(Level.WARNING,"execption" , e);
-            fail("Есть excecptions");
+            fail("excecptions");
         }
     }
 

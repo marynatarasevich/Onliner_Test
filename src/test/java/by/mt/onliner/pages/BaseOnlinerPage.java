@@ -23,7 +23,7 @@ public class BaseOnlinerPage extends BasePage {
         try {
             return getDriver().findElement(By.xpath("//*[@class='onliner_logo']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -32,7 +32,7 @@ public class BaseOnlinerPage extends BasePage {
             getDriver().findElement(By.xpath("//a[@class='auth-bar__item auth-bar__item--cart']")).click();
             return new BasketPage();
         }catch(Exception e){
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }
@@ -41,7 +41,7 @@ public class BaseOnlinerPage extends BasePage {
             getDriver().findElement(By.xpath("//*[@class='onliner_logo']//parent::a")).click();
             return new OnlinerMainPage();
         }catch(Exception e){
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }

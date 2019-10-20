@@ -31,10 +31,10 @@ public class MobilePhones_Test extends BaseTest{
             LOGGER.log(Level.INFO, "open discussions");
             DiscussionsPage discussionsPage = mobilePhonePage.openDiscussions();
             LOGGER.log(Level.INFO, "check that at discussions title of phone is present");
-            assertTrue("Не отображается название телефона в обсуждениях!", good.equalsIgnoreCase(discussionsPage.getHeadline()));
+            assertTrue("Title of phone is not displayed in discussions!", good.equalsIgnoreCase(discussionsPage.getHeadline()));
         }catch(Exception e){
             LOGGER.log(Level.WARNING,"exception" , e);
-            fail("Есть excecptions");
+            fail("excecptions");
         }
     }
 

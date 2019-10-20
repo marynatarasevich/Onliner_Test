@@ -21,7 +21,7 @@ public class DiscussionsPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//h1[@class='m-title']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -29,7 +29,7 @@ public class DiscussionsPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//h1[@class='m-title']//a")).getAttribute("innerText");
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }

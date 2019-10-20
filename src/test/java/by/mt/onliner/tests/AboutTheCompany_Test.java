@@ -27,27 +27,27 @@ public class AboutTheCompany_Test extends BaseTest{
             LOGGER.log(Level.INFO,"openning page About the company");
             AboutTheCompanyPage aboutTheCompanyPage = onlinerMainPage.clickAboutTheCompany();
             LOGGER.log(Level.INFO,"checking the phone");
-            assertTrue("Не отображается номер телефона!", aboutTheCompanyPage.checkPhone("Телефон: +375 (17) 328-19-76."));
+            assertTrue("Phone number is not displayed!", aboutTheCompanyPage.checkPhone("Телефон: +375 (17) 328-19-76."));
         }catch(Exception e){
             LOGGER.log(Level.WARNING,"exception" , e);
-            fail("Есть excecptions");
+            fail("excecptions");
         }
     }
     @Test(groups = {"regression"})
     public void testAboutTheCompanyClickLogo() {
         try {
-            LOGGER.log(Level.INFO,"стартуем браузер");
+            LOGGER.log(Level.INFO,"starting browser");
             WebDriverFactory.startBrowser(true);
             OnlinerMainPage onlinerMainPage = new OnlinerMainPage();
-            LOGGER.log(Level.INFO,"открываем страницу О компании");
+            LOGGER.log(Level.INFO,"openning page About the company");
             AboutTheCompanyPage aboutTheCompanyPage = onlinerMainPage.clickAboutTheCompany();
-            LOGGER.log(Level.INFO,"жмем на лого");
+            LOGGER.log(Level.INFO,"clicking logo");
             onlinerMainPage=aboutTheCompanyPage.clickLogo();
-            LOGGER.log(Level.INFO,"проверяем что открылась главная страница");
-            assertNotNull( onlinerMainPage,"Не открылась главная страница!");
+            LOGGER.log(Level.INFO,"check that the main page is opened");
+            assertNotNull( onlinerMainPage,"The main page is not opened!");
         }catch(Exception e){
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
-            fail("Есть excecptions");
+            LOGGER.log(Level.WARNING,"execption" , e);
+            fail("excecptions");
         }
     }
 

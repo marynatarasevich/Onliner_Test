@@ -21,7 +21,7 @@ public class FlatPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//div[@class='apartment-cover']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -29,7 +29,7 @@ public class FlatPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//span[@class='apartment-bar__value']")).getAttribute("innerText");
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }

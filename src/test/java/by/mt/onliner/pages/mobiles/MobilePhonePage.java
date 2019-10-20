@@ -23,7 +23,7 @@ public class MobilePhonePage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//h1[@class='catalog-masthead__title']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -34,7 +34,7 @@ public class MobilePhonePage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//a[@class='button button_orange button_big offers-description__button']")).click();
             return new OffersPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }
@@ -43,7 +43,7 @@ public class MobilePhonePage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//span[text()='Обсуждение на форуме']//parent::a")).click();
             return new DiscussionsPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }

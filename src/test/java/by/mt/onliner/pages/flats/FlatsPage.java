@@ -21,7 +21,7 @@ public class FlatsPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//span[@class='project-navigation__sign'][text()='Продажа']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -30,7 +30,7 @@ public class FlatsPage extends BaseOnlinerPage {
             getDriver().findElement(By.xpath("//a[@class='classified__handle']")).click();
         return new FlatPage();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }

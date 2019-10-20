@@ -21,7 +21,7 @@ public class AboutTheCompanyPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//div[@class='news-header__title']//h1[text()='О сайте']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -29,7 +29,7 @@ public class AboutTheCompanyPage extends BaseOnlinerPage {
         try{
             return getDriver().findElement(By.xpath("//div[@class='news-text']//p[text()='"+phone+"']")).isDisplayed();
         }catch(Exception e){
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }

@@ -25,7 +25,7 @@ public class BasketPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//h1[@class='cart-header__title']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -35,7 +35,7 @@ public class BasketPage extends BaseOnlinerPage {
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='cart-product-title__link cart-product-title__link_name']//span[contains(text(),'"+title+"')]")));
             return getDriver().findElement(By.xpath("//a[@class='cart-product-title__link cart-product-title__link_name']//span[contains(text(),'"+title+"')]")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }

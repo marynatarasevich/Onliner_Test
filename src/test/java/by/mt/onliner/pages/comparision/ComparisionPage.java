@@ -24,7 +24,7 @@ public class ComparisionPage extends BaseOnlinerPage {
         try {
             return getDriver().findElement(By.xpath("//h1[@class='b-offers-title'][text()='Сравнение товаров']")).isDisplayed();
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }
@@ -38,7 +38,7 @@ public class ComparisionPage extends BaseOnlinerPage {
             return goods;
 
         }catch(Exception e){
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return null;
         }
     }

@@ -34,7 +34,7 @@ public class NoteBooksPage extends BaseOnlinerPage {
     }
     public boolean chooseManufacturer(String manufacturer){
         try {
-            LOGGER.log(Level.INFO,"Опускаем скролл в нужное положение");
+            LOGGER.log(Level.INFO,"scrolling to the correct position");
             WebElement element = getDriver().findElement(By.xpath("//span[text()='Производитель']"));
             ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
             getDriver().findElement(By.xpath("//input[@value='"+manufacturer.toLowerCase()+"']//parent::span")).click();
@@ -47,7 +47,7 @@ public class NoteBooksPage extends BaseOnlinerPage {
 
     public boolean chooseAnotherResolution(String resolution){
         try {
-            LOGGER.log(Level.INFO,"Опускаем скролл в нужное положение");
+            LOGGER.log(Level.INFO,"scrolling to the correct position");
             WebElement element = getDriver().findElement(By.xpath("//span[text()='Разрешение экрана']"));
             ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
             Select select = new Select(getDriver().findElement(By.xpath("//span[text()='Разрешение экрана']//parent::div//following-sibling::div//*[@class='schema-filter-control__item']")));
@@ -61,14 +61,14 @@ public class NoteBooksPage extends BaseOnlinerPage {
 
     public boolean chooseColor(String color){
         try {
-            LOGGER.log(Level.INFO,"Опускаем скролл в нужное положение");
+            LOGGER.log(Level.INFO,"scrolling to the correct position");
             WebElement element = getDriver().findElement(By.xpath("//span[text()='Цвет корпуса']"));
             ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
             getDriver().findElement(By.xpath("//span[text()='Цвет корпуса']//parent::div//following-sibling::div//*[@class='schema-filter-control__item']")).click();
             getDriver().findElement(By.xpath("//span[text()='Цвет корпуса']//parent::div//parent::div//div[@class='schema-filter-popover schema-filter-popover_visible']//span[@class='schema-filter__checkbox-text'][text()='"+color+"']//preceding-sibling::span//span[@class='i-checkbox__faux']")).click();
             return true;
         } catch (Exception e) {
-            LOGGER.log(Level.WARNING,"что-то пошло не так" , e);
+            LOGGER.log(Level.WARNING,"exception" , e);
             return false;
         }
     }

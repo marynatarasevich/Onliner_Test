@@ -117,7 +117,7 @@ public class WebDriverFactory {
         try {
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            Files.copy(scrFile, new File("c:\\tmp\\assobo\\" + methodName + ".png"));
+            Files.copy(scrFile, new File(methodName + ".png"));
             System.out.println("ScreenShot method called");
             String scriptToExecute = "var performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}; var network = performance.getEntries() || {}; return network;";
             String netData = ((JavascriptExecutor)driver).executeScript(scriptToExecute).toString();

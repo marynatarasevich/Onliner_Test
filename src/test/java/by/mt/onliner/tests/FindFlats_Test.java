@@ -27,11 +27,11 @@ public class FindFlats_Test extends BaseTest{
             LOGGER.log(Level.INFO, "choose first flat");
             FlatPage flatPage = flatsPage.selectFirstFlat();
             LOGGER.log(Level.INFO, "check the title of  3 room flat");
-            assertTrue("Открыта неправильная квартира!", flatPage.getFlatMark().equals("3-комнатная квартира"));
+            assertTrue("Wrong flat is opened!", flatPage.getFlatMark().equals("3-комнатная квартира"));
 
         } catch (Exception e) {
             LOGGER.log(Level.WARNING,"execption" , e);
-            fail("Есть excecptions");
+            fail("excecptions");
         }
     }
 
